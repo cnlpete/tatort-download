@@ -22,6 +22,7 @@ def fetch(nr, dummy=False):
 	if 'tgl-ab-20-uhr' in tatortURL:
 		print '\n'+str(i)+': '+tatortURL+'\n'
 		if not dummy:
+			#print 'tatort URL: '+tatortURL
 			dump(tatortURL)
 		return True
 	else:
