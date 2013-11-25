@@ -12,7 +12,7 @@ def rtmpdump(fetch, pageURL, outfile):
 	Popen(split(cmd)).wait()
 
 def wget(fetch, outfile):
-	cmd = 'wget --user-agent="" "'+fetch['playpath']+'" -O "'+outfile+'"'
+	cmd = 'wget -c --user-agent="" "'+fetch['playpath']+'" -O "'+outfile+'"'
 	print cmd
 	Popen(split(cmd)).wait()
 
@@ -35,7 +35,7 @@ def dump(pageURL):
 		URLs.append( {'resource': between(excerpt, ', "', '", '), 'playpath': between(excerpt, ', "', '", ', 2)} )
 	#print URLs
 
-	outfile = between(pageURL, '/tatort/', '-fsk')+'.f4v'
+	outfile = between(pageURL, '/tatort/', '-video')+'.flv'
 	if outfile == '':
 		outfile = 'streamdump.f4v'
 	if exists(outfile):
