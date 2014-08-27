@@ -19,7 +19,7 @@ def fetch(nr, dummy=False):
 	if not 'http://' in tatortURL:
 		tatortURL = 'http://www.ardmediathek.de'+tatortURL
 
-	if 'tgl-ab-20-uhr' in tatortURL:
+	if 'tatort' in tatortURL:
 		print '\n'+str(i)+': '+tatortURL+'\n'
 		if not dummy:
 			#print 'tatort URL: '+tatortURL
